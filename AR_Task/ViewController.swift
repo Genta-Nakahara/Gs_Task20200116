@@ -44,6 +44,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
+        
+        //水平面を検出
+        configuration.planeDetection = .horizontal
 
         // Run the view's session
         sceneView.session.run(configuration)
@@ -60,7 +63,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
        
 
        func createTaskNode() -> SCNNode {
-               let taskScene = SCNScene(named: "art.scnassets/Pikachu/PikachuF_ColladaMax.scn")!
+               let taskScene = SCNScene(named: "art.scnassets/tree/tree.scn")!
                
                let taskNode = SCNNode()
                
